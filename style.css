@@ -1,3 +1,11 @@
+.main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
 .center {
   text-align: center;
 }
@@ -16,7 +24,11 @@
   margin-top: 25px;
 }
 
-.bigOlRedButton {
+.title-image {
+  width: 400px;
+}
+
+.bigOlRedButton{
   text-align: center;
   color: white;
   background-color: red;
@@ -28,8 +40,9 @@
 
 .video {
   position: absolute;
-  top: 80px;
-  right: 0;
-  width: 200px;
-  height: 100px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
