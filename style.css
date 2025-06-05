@@ -30,11 +30,12 @@
 
 .bigOlRedButton{
   text-align: center;
+  font: 20px Impact, sans-serif;
   color: white;
   background-color: red;
   border-radius: 50%;
   font-size: 50px;
-  padding: 40px 15px;
+  padding: 40px 25px;
   border: 2px solid #8b0000;
 }
 
@@ -45,4 +46,24 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.versionText {
+  color: white;
+  text-shadow: 2px 2px 8px black;
+  font: 25px VCR OSD Mono, monospace;
+}
+
+.instructionText{
+  color: white;
+  font-size: 15px;
+  margin-top: 50px;
+  font: 15px VCR OSD Mono, monospace;
+}
+
+.instructionText2{
+  color: white;
+  font-size: 15px;
+  margin-top: -25px;
+  font: 15px VCR OSD Mono, monospace;
 }
