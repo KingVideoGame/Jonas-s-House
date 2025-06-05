@@ -1,0 +1,35 @@
+.center {
+  text-align: center;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin {
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.bigOlRedButton {
+  text-align: center;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  font-size: 50px;
+  padding: 40px 15px;
+  border: 2px solid #8b0000;
+}
+
+.video {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+}
