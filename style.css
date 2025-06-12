@@ -1,3 +1,27 @@
+html, body, .screen {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  padding: 10px;
+}
+
+.screen[hidden] {
+  display: none;
+}
+
 .content {
   width: 100%;
   height: 100%;
@@ -70,10 +94,7 @@
 
 .contextText{
   color: white;
-  padding-top: 200px;
   font: 25px VCR OSD Mono, monospace;
-  padding-left: 100px;
-  padding-right: 100px;
   text-align: center;
   background-color: black;
   padding: 20px;
