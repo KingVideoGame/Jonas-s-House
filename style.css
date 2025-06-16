@@ -123,6 +123,15 @@ body {
   position: relative;
 }
 
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.livingRoomText span {
+  animation: fade-out 2s 6s ease-in-out forwards;
+}
+
 .ethanSpriteImage{
   height: 200px;
   position: absolute;
