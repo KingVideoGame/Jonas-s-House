@@ -32,25 +32,28 @@ document.getElementById("entryScreen").addEventListener("keypress", function(eve
     console.log("KeyC pressed!");
     document.getElementById("entryScreen").hidden = true;
     document.getElementById("livingRoom").hidden = false;
+    document.getElementById("livingRoom").focus();
   }
 });
 
 //Keypress for ethanSprite
-document.getElementById("livingRoom").addEventListener("keypress", function(event) {
+document.getElementById("livingRoom").addEventListener("keydown", function(event) {
+  const sprites = document.querySelectorAll(".ethanSpriteImage");
   if (event.code === "ArrowUp") {
     console.log("Up arrow pressed!");
-    document.getElementById("ethanForward").hidden = true;
+    sprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanBackward").hidden = false;
-  } else if (event.code === "ArrowDown") {
+  } if (event.code === "ArrowDown") {
     console.log("Down arrow pressed!");
+    sprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanForward").hidden = false;
-    document.getElementById("ethanBackward").hidden = true;
-  } else if (event.code === "ArrowLeft") {
+  } if (event.code === "ArrowLeft") {
     console.log("Left arrow pressed!");
+    sprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanLeft").hidden = false;
-  } else if (event.code === "ArrowRight") {
+  } if (event.code === "ArrowRight") {
     console.log("Right arrow pressed!");
-    document.getElementById("ethanLeft").hidden = true;
+    sprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanRight").hidden = false;
   }
 }
