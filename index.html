@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HOUSE</title>
-        <script defer src="main.js"></script>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <section id="main" class="screen" tabindex="0">
-            <video class="video" autoplay loop id="title-background">
-                <source src="title-screen-video.mp4" type="video/mp4">
-            </video>
-            <div class="content">
-                <h1 class="title no-margin center">
+
+<head>
+    <title>HOUSE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="main" class="screen" tabindex="0">
+        <video class="video" autoplay loop id="title-background">
+            <source src="title-screen-video.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1 class="title no-margin center">
                 <img src="jonas's-house-title.png" alt="HOUSE" class="title-image">
-                </h1>
-                <h2 class="center margin versionText">
-                    prototype alpha
-                </h2>
-                <p class="center">
-                    <button id="play-button" class="bigOlRedButton">
-                        PLAY
-                    </button>
-                </p>
-                <audio id="title-music" loop>
-                    <source src="jonas's-house-theme.m4a" type="audio/aac">
-                </audio>
-                <h3 class="center margin instructionText">Press spacebar for music</h3>
-                <h3 class="center margin instructionText2">Press P to pause music</h3>
-            </div>
-        </section>
-        <section id="entryScreen" class="screen" tabindex="0" hidden>
-            <p class="contextText">
-                You've arrived home from your last day of school, and can't wait to collapse
-                on your bed. Unfortunately, your mischevious brother, Jonas, has transformed 
-                the house into a maze of escape rooms while you were away. Fortunately, he 
-                accidentally left hints on how to escape each room. Use the arrow keys to move.
-                Press A to pick things up. Find hints. Get your bedroom back. And try not to
-                have an epic boss battle with Jonas, because that would be a pain in the butt to code.
+            </h1>
+            <h2 class="center margin versionText">
+                prototype alpha
+            </h2>
+            <p class="center">
+                <button id="play-button" class="bigOlRedButton">
+                    PLAY
+                </button>
             </p>
-            <div class="contextText">Press C to continue</div>
-        </section>
-        <section id="livingRoom" class="screen" hidden>
-           <p> If you can read this, then this code is working. HOORAY! now you can actually make the videogame portion. </p>
-        </section>
-    </body>
+            <audio id="title-music" loop>
+                <source src="jonas's-house-theme.m4a" type="audio/aac">
+            </audio>
+            <h3 class="center margin instructionText">Press spacebar for music</h3>
+            <h3 class="center margin instructionText2">Press P to pause music</h3>
+        </div>
+    </section>
+    <section id="entryScreen" class="screen" tabindex="0" hidden>
+        <p class="contextText">
+            You've arrived home from your last day of school, and can't wait to collapse
+            on your bed. Unfortunately, your mischevious brother, Jonas, has transformed
+            the house into a maze of escape rooms while you were away. Fortunately, he
+            accidentally left hints on how to escape each room. Use the arrow keys to move.
+            Press A to pick things up. Find hints. Get your bedroom back. And try not to
+            have an epic boss battle with Jonas, because that would be a pain in the butt to code.
+        </p>
+        <div class="contextText">Press C to continue</div>
+    </section>
+    <section id="livingRoom" class="screen" hidden>
+        <div class="ethanSprite">
+            <img src="ethan-Forward.png" id="ethanForward" class="ethanSpriteImage">
+            <img src="ethan-Backward.png" id="ethanBackward" class="ethanSpriteImage" hidden>
+            <img src="ethan-Left.png" id="ethanLeft" class="ethanSpriteImage" hidden>
+            <img src="ethan-Right.png" id="ethanRight" class="ethanSpriteImage" hidden>
+        </div>
+        <h1 id="livingRoomText" class="livingRoomText">The Living Room</h1>
+    </section>
+</body>
 </html>

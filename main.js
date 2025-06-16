@@ -34,4 +34,24 @@ document.getElementById("entryScreen").addEventListener("keypress", function(eve
     document.getElementById("livingRoom").hidden = false;
   }
 });
-  
+
+//Keypress for ethanSprite
+document.getElementById("livingRoom").addEventListener("keypress", function(event) {
+  if (event.code === "ArrowUp") {
+    console.log("Up arrow pressed!");
+    document.getElementById("ethanForward").hidden = true;
+    document.getElementById("ethanBackward").hidden = false;
+  } else if (event.code === "ArrowDown") {
+    console.log("Down arrow pressed!");
+    document.getElementById("ethanForward").hidden = false;
+    document.getElementById("ethanBackward").hidden = true;
+  } else if (event.code === "ArrowLeft") {
+    console.log("Left arrow pressed!");
+    document.getElementById("ethanLeft").hidden = false;
+  } else if (event.code === "ArrowRight") {
+    console.log("Right arrow pressed!");
+    document.getElementById("ethanLeft").hidden = true;
+    document.getElementById("ethanRight").hidden = false;
+  }
+}
+);
