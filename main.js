@@ -10,6 +10,7 @@ document.getElementById("play-button").addEventListener("click", function() {
   document.getElementById("entryScreen").hidden = false;
   document.getElementById("entryScreen").focus();
 });
+
 //Music controls!
 document.getElementById("main").addEventListener("keydown", function(event) {
   const audioElement = document.getElementById("title-music");
@@ -26,6 +27,7 @@ document.getElementById("main").addEventListener("keydown", function(event) {
     }
   }
 });
+
 //Keypress for the entry screen
 document.getElementById("entryScreen").addEventListener("keypress", function(event) {
   if (event.code === "KeyC") {
@@ -38,23 +40,23 @@ document.getElementById("entryScreen").addEventListener("keypress", function(eve
 
 //Keypress for ethanSprite
 document.getElementById("livingRoom").addEventListener("keydown", function(event) {
-  const sprites = document.querySelectorAll(".ethanSpriteImage");
+  const sprites = document.querySelectorAll(".ethanSpriteVideo");
   if (event.code === "ArrowUp") {
     console.log("Up arrow pressed!");
     sprites.forEach(sprite => sprite.hidden = true);
-    document.getElementById("ethanBackward").hidden = false;
+    document.getElementById("ethanRunningBackward").hidden = false;
   } if (event.code === "ArrowDown") {
     console.log("Down arrow pressed!");
     sprites.forEach(sprite => sprite.hidden = true);
-    document.getElementById("ethanForward").hidden = false;
+    document.getElementById("ethanRunningForward").hidden = false;
   } if (event.code === "ArrowLeft") {
     console.log("Left arrow pressed!");
     sprites.forEach(sprite => sprite.hidden = true);
-    document.getElementById("ethanLeft").hidden = false;
+    document.getElementById("ethanRunningLeft").hidden = false;
   } if (event.code === "ArrowRight") {
     console.log("Right arrow pressed!");
     sprites.forEach(sprite => sprite.hidden = true);
-    document.getElementById("ethanRight").hidden = false;
+    document.getElementById("ethanRunningRight").hidden = false;
+    const button = document.getElementById("ArrowUp");
   }
-}
-);
+});
