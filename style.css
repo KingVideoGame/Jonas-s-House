@@ -147,3 +147,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.livingRoomSubtext {
+  color: white;
+  font: 30px VCR OSD Mono, monospace;
+  text-align: center;
+  padding: 20px;
+  margin-top: -75px;
+  animation: typewriter 5s steps(15, end) forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.livingRoomSubtext span {
+  animation: fade-out 2s 6s ease-in-out forwards;
+}
