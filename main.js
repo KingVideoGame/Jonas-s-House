@@ -41,21 +41,26 @@ document.getElementById("entryScreen").addEventListener("keypress", function (ev
 //Keypress for ethanSprite
 document.getElementById("livingRoom").addEventListener("keydown", function (event) {
   const videoSprites = document.querySelectorAll(".ethanSpriteVideo");
+  const imageSprites = document.querySelectorAll(".ethanSpriteImage");
   if (event.code === "ArrowUp") {
     console.log("Up arrow pressed!");
     videoSprites.forEach(sprite => sprite.hidden = true);
+    imageSprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanRunningBackward").hidden = false;
   } if (event.code === "ArrowDown") {
     console.log("Down arrow pressed!");
     videoSprites.forEach(sprite => sprite.hidden = true);
+    imageSprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanRunningForward").hidden = false;
   } if (event.code === "ArrowLeft") {
     console.log("Left arrow pressed!");
     videoSprites.forEach(sprite => sprite.hidden = true);
+    imageSprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanRunningLeft").hidden = false;
   } if (event.code === "ArrowRight") {
     console.log("Right arrow pressed!");
     videoSprites.forEach(sprite => sprite.hidden = true);
+    imageSprites.forEach(sprite => sprite.hidden = true);
     document.getElementById("ethanRunningRight").hidden = false;
   }
 });

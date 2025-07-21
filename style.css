@@ -16,6 +16,7 @@ html, body, .screen {
   justify-content: center;
   background-color: black;
   padding: 10px;
+  perspective: 1000px;
 }
 
 .screen[hidden] {
@@ -115,7 +116,7 @@ body {
   font: 60px VCR OSD Mono, monospace;
   text-decoration: underline;
   text-decoration-thickness: 5px;
-  text-align: cente
+  text-align: center;
   padding: 20px;
   animation: typewriter 5s steps(15, end) forwards;
   white-space: nowrap;
@@ -143,7 +144,7 @@ body {
 }
 
 .ethanSpriteVideo{
-  height: 215px;
+  height: 250px;
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -156,11 +157,12 @@ body {
   font: 30px VCR OSD Mono, monospace;
   text-align: center;
   padding: 20px;
-  margin-top: -75px;
+  margin-top: -100px;
   animation: typewriter 5s steps(15, end) forwards;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
+  z-index: 3;
 }
 
 .livingRoomSubtext span {
@@ -169,10 +171,13 @@ body {
 
 .livingRoomFloor {
   position: relative;
-  z-index; 1;
+  object-fit: cover;
+  z-index: 1;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotateX(60deg);
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
 }
