@@ -134,22 +134,36 @@ body {
   animation: fade-out 2s 6s ease-in-out forwards;
 }
 
-.ethanSpriteImage{
-  height: 200px;
+.sprite {
   position: absolute;
-  z-index: 2;
-  top: 50%;
+  bottom: 0;
+  height: 40vw;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%) translateZ(-50vw) translateX(var(--sprite-x, 0)) translateZ(var(--sprite-z, 0));;
+  transform-style: preserve-3d;
+  width: 10vw;
 }
 
-.ethanSpriteVideo{
-  height: 250px;
+.sprite img,
+.sprite video {
   position: absolute;
-  z-index: 2;
-  top: 50%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+}
+
+img.ethanSpriteImage {
+  height: 100%;
+}
+
+video.ethanSpriteVideo {
+  bottom: -10%;
+  height: 125%;
+}
+
+video.ethanSpriteRunningRight {
+  bottom: 0;
+  height: 110%;
 }
 
 .livingRoomSubtext {
@@ -169,24 +183,52 @@ body {
   animation: fade-out 2s 6s ease-in-out forwards;
 }
 
-.livingRoomFloor {
-  position: relative;
-  object-fit: cover;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%) rotateX(60deg);
+.room {
+  left: 0;
+  bottom: 0;
+  height: 100vw;
+  position: absolute;
+  transform: rotateX(-30deg) translateX(var(--room-x, 0)) translateZ(var(--room-z, 0));
+  transform-origin: bottom center;
   transform-style: preserve-3d;
+  width: 100vw;
+  z-index: 1;
+}
+
+.side {
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vw;
+  transform-style: preserve-3d;
+}
+
+.bottom.side {
+  background-image: url('living-room-carpet.png');
+  background-position: bottom center;
+  transform: rotateX(90deg);
   transform-origin: bottom center;
 }
 
-.ethanSpriteRunningRight {
-  height: 220px;
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.back.side {
+  background-image: url('living-room-back-wall.png');
+  background-position: bottom center;
+  transform: translateZ(-100vw);
+  transform-origin: bottom center;
+}
+
+.left.side {
+  background-image: url('living-room-left-wall.png');
+  background-position: bottom right;
+  transform-origin: bottom left;
+  transform: rotateY(90deg);
+}
+
+.right.side {
+  background-image: url('living-room-right-wall.png');
+  background-position: bottom left;
+  transform-origin: bottom right;
+  transform: rotateY(-90deg);
 }

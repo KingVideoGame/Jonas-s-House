@@ -44,22 +44,26 @@
         <div class="contextText">Press C to continue</div>
     </section>
     <section id="livingRoom" class="screen" tabindex="0" hidden>
-        <div class="ethanSprite">
-            <img src="ethan-Forward.png" id="ethanForward" class="ethanSpriteImage">
-            <img src="ethan-Backward.png" id="ethanBackward" class="ethanSpriteImage" hidden>
-            <img src="ethan-Left.png" id="ethanLeft" class="ethanSpriteImage" hidden>
-            <img src="ethan-Right.png" id="ethanRight" class="ethanSpriteImage" hidden>
-            <video src="ethan-Running-Forward.webm" id="ethanRunningForward" class="ethanSpriteVideo" autoplay loop
-                muted hidden></video>
-            <video src="ethan-Running-Backward.webm" id="ethanRunningBackward" class="ethanSpriteVideo" autoplay loop
-                muted hidden></video>
-            <video src="ethan-Running-Left.webm" id="ethanRunningLeft" class="ethanSpriteVideo" autoplay loop muted
-                hidden></video>
-            <video src="ethan-Running-Right.webm" id="ethanRunningRight" class="ethanSpriteVideo ethanSpriteRunningRight" autoplay loop
-                muted hidden></video>
+        <div class="room">
+            <div class="back side"></div>
+            <div class="left side"></div>
+            <div class="right side"></div>
+            <div class="bottom side"></div>
+            <div class="sprite">
+                <img src="ethan-Forward.png" id="ethanForward" class="ethanSpriteImage">
+                <img src="ethan-Backward.png" id="ethanBackward" class="ethanSpriteImage" hidden>
+                <img src="ethan-Left.png" id="ethanLeft" class="ethanSpriteImage" hidden>
+                <img src="ethan-Right.png" id="ethanRight" class="ethanSpriteImage" hidden>
+                <video src="ethan-Running-Forward.webm" id="ethanRunningForward" class="ethanSpriteVideo" autoplay loop
+                    muted hidden></video>
+                <video src="ethan-Running-Backward.webm" id="ethanRunningBackward" class="ethanSpriteVideo" autoplay loop
+                    muted hidden></video>
+                <video src="ethan-Running-Left.webm" id="ethanRunningLeft" class="ethanSpriteVideo" autoplay loop muted
+                    hidden></video>
+                <video src="ethan-Running-Right.webm" id="ethanRunningRight" class="ethanSpriteVideo ethanSpriteRunningRight" autoplay loop
+                    muted hidden></video>
+            </div>
         </div>
-
-        <img src="living-Room-Floor.png" alt="Living Room Floor" class="livingRoomFloor center">
         <h1 id="livingRoomText" class="livingRoomText"><span>The Living Room</span></h1>
         <h2 id="livingRoomSubtext" class="livingRoomSubtext"><span>There must be a way out somewhere...</span></h2>
         </div>
