@@ -38,6 +38,8 @@ document.getElementById("entryScreen").addEventListener("keypress", function (ev
   }
 });
 
+//stuff that makes me move around the living room
+
 const room = document.getElementById("livingRoom");
 
 const moveDelay = 15;
@@ -139,3 +141,8 @@ document.getElementById("livingRoom").addEventListener("keyup", function (event)
     moveTimeout = 0;
   }
 });
+
+//"A" Button!
+if (spriteX <= -30 && spriteZ <= -30) {
+  document.getElementById("a-button.png").hidden = false;
+}

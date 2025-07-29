@@ -175,7 +175,7 @@ video.ethanSpriteRunningRight {
   animation: typewriter 5s steps(15, end) forwards;
   white-space: nowrap;
   overflow: hidden;
-  position: relative;
+  position: absolute;
   z-index: 3;
 }
 
@@ -231,4 +231,14 @@ video.ethanSpriteRunningRight {
   background-position: bottom left;
   transform-origin: bottom right;
   transform: rotateY(-90deg);
+}
+
+.a-button {
+  position: absolute;
+  text-align: center;
+  margin-top: 20px;
+  bottom: 90%;
+  left: 45%;
+  width: 100px;
+  z-index: 4;
 }
