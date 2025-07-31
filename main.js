@@ -55,6 +55,7 @@ function syncPosition() {
   room.style.setProperty("--sprite-z", `${spriteZ}vw`);
   room.style.setProperty("--room-x", `${-spriteX}vw`);
   room.style.setProperty("--room-z", `${-spriteZ}vw`);
+  updateAButton();
 }
 
 function moveLeft() {
@@ -143,6 +144,25 @@ document.getElementById("livingRoom").addEventListener("keyup", function (event)
 });
 
 //"A" Button!
-if (spriteX <= -30 && spriteZ <= -30) {
-  document.getElementById("a-button.png").hidden = false;
+function updateAButton() {
+  const shown = spriteX >= 30 && spriteZ <= -30;
+  document.getElementById("a-button").hidden = !shown;
 }
+
+document.getElementById("livingRoom").addEventListener("keydown", function (event) {
+  if (spriteX >= 30 && spriteZ <= -30) {
+      if (event.code === "KeyA") {
+        console.log("KeyA pressed!");
+        document.getElementById("livingRoomCodeBackground").hidden = false;
+        document.getElementById("bButtonText").hidden = false;
+        document.getElementById("a-button").hidden = true;
+      }
+    }
+    else event.preventDefault()
+      console.log("Womp womp KeyA doesn't work here");
+    if (event.code === "KeyB") {
+      console.log("KeyB pressed!");
+      document.getElementById("livingRoomCodeBackground").hidden = true;
+      document.getElementById("bButtonText").hidden = true;
+    }
+  });

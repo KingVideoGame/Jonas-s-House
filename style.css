@@ -237,8 +237,28 @@ video.ethanSpriteRunningRight {
   position: absolute;
   text-align: center;
   margin-top: 20px;
-  bottom: 90%;
-  left: 45%;
-  width: 100px;
+  bottom: 92%;
+  left: 48%;
+  width: 60px;
   z-index: 4;
+}
+
+.livingRoomCode {
+  position: absolute;
+  text-align: center;
+  width: 75%;
+  height: 75%;
+  background-image: url('living-room-code-background.png');
+  background-size: cover;
+  z-index: 4;
+}
+
+.bButtonText {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font: 20px VCR OSD Mono, monospace;
+  bottom: 10%;
+  left: 50%;
+  z-index: 5;
 }
