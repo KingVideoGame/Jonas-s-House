@@ -9,8 +9,14 @@
 </head>
 
 <body>
-    <section id="main" class="screen" tabindex="0">
-        <video class="video" autoplay loop id="title-background">
+    <section id="intro" class="screen" tabindex="0">
+        <video class="cutscene" autoplay id="introCutscene">
+            <source src="intro-cutscene.mov" type="video/mp4">
+        </video>
+        <h3 class="introText" id="introText">Press D to skip cutscene</h3>
+        </div>
+    <section id="main" class="screen" tabindex="0" hidden muted>
+        <video class="video" pause loop id="title-background">
             <source src="title-screen-video.mp4" type="video/mp4">
         </video>
         <div class="content">
@@ -25,7 +31,7 @@
                     PLAY
                 </button>
             </p>
-            <audio id="title-music" autoplay loop>
+            <audio id="title-music" pause loop>
                 <source src="jonas's-house-theme.m4a" type="audio/aac">
             </audio>
             <h3 class="center margin instructionText">Press spacebar to play music</h3>
@@ -56,12 +62,12 @@
                 <img src="ethan-Right.png" id="ethanRight" class="ethanSpriteImage" hidden>
                 <video src="ethan-Running-Forward.webm" id="ethanRunningForward" class="ethanSpriteVideo" autoplay loop
                     muted hidden></video>
-                <video src="ethan-Running-Backward.webm" id="ethanRunningBackward" class="ethanSpriteVideo" autoplay loop
-                    muted hidden></video>
+                <video src="ethan-Running-Backward.webm" id="ethanRunningBackward" class="ethanSpriteVideo" autoplay
+                    loop muted hidden></video>
                 <video src="ethan-Running-Left.webm" id="ethanRunningLeft" class="ethanSpriteVideo" autoplay loop muted
                     hidden></video>
-                <video src="ethan-Running-Right.webm" id="ethanRunningRight" class="ethanSpriteVideo ethanSpriteRunningRight" autoplay loop
-                    muted hidden></video>
+                <video src="ethan-Running-Right.webm" id="ethanRunningRight"
+                    class="ethanSpriteVideo ethanSpriteRunningRight" autoplay loop muted hidden></video>
             </div>
         </div>
         <h1 id="livingRoomText" class="livingRoomText"><span>The Living Room</span></h1>

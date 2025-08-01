@@ -1,4 +1,6 @@
-html, body, .screen {
+html,
+body,
+.screen {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -7,6 +9,14 @@ html, body, .screen {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+
+.introText{
+  position: absolute;
+  top: 94%;
+  left: 80%;
+  color: white;
+  font: 20px VCR OSD Mono, monospace;
 }
 
 .screen {
@@ -53,7 +63,7 @@ html, body, .screen {
   width: 400px;
 }
 
-.bigOlRedButton{
+.bigOlRedButton {
   text-align: center;
   font: 20px Impact, sans-serif;
   color: white;
@@ -79,21 +89,21 @@ html, body, .screen {
   font: 25px VCR OSD Mono, monospace;
 }
 
-.instructionText{
+.instructionText {
   color: white;
   font-size: 15px;
   margin-top: 50px;
   font: 15px VCR OSD Mono, monospace;
 }
 
-.instructionText2{
+.instructionText2 {
   color: white;
   font-size: 15px;
   margin-top: -25px;
   font: 15px VCR OSD Mono, monospace;
 }
 
-.contextText{
+.contextText {
   color: white;
   font: 25px VCR OSD Mono, monospace;
   text-align: center;
@@ -107,11 +117,16 @@ body {
 }
 
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
-.livingRoomText{
+.livingRoomText {
   color: white;
   font: 60px VCR OSD Mono, monospace;
   text-decoration: underline;
@@ -126,8 +141,13 @@ body {
 }
 
 @keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 .livingRoomText span {
@@ -139,7 +159,7 @@ body {
   bottom: 0;
   height: 40vw;
   left: 50%;
-  transform: translateX(-50%) translateZ(-50vw) translateX(var(--sprite-x, 0)) translateZ(var(--sprite-z, 0));;
+  transform: translateX(-50%) translateZ(-50vw) translateX(var(--sprite-x, 0)) translateZ(var(--sprite-z, 0));
   transform-style: preserve-3d;
   width: 10vw;
 }
@@ -261,4 +281,13 @@ video.ethanSpriteRunningRight {
   bottom: 10%;
   left: 50%;
   z-index: 5;
+}
+
+.cutscene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
