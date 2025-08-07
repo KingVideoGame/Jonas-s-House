@@ -179,6 +179,9 @@ document.getElementById("livingRoom").addEventListener("keydown", function (even
       document.getElementById("livingRoomCodeBackground").hidden = false;
       document.getElementById("bButtonText").hidden = false;
       document.getElementById("a-button").hidden = true;
+      document.getElementById("livingRoomCodeOne").hidden = false;
+      document.getElementById("livingRoomCodeTwo").hidden = false;
+      document.getElementById("livingRoomCodeThree").hidden = false;
     }
   }
   else event.preventDefault()
@@ -187,5 +190,8 @@ document.getElementById("livingRoom").addEventListener("keydown", function (even
     console.log("KeyB pressed!");
     document.getElementById("livingRoomCodeBackground").hidden = true;
     document.getElementById("bButtonText").hidden = true;
+    document.getElementById("livingRoomCodeOne").hidden = true;
+    document.getElementById("livingRoomCodeTwo").hidden = true;
+    document.getElementById("livingRoomCodeThree").hidden = true;
   }
 });
