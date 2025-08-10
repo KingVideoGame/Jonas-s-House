@@ -302,7 +302,7 @@ video.ethanSpriteRunningRight {
   text-align: center;
   font-size: 50px;
   border: 10px solid red;
-  padding: 5px 5px;
+  padding: 10px 10px;
   z-index: 5;
 }
 
@@ -315,7 +315,7 @@ video.ethanSpriteRunningRight {
   text-align: center;
   font-size: 50px;
   border: 10px solid yellow;
-  padding: 5px 5px;
+  padding: 10px 10px;
   z-index: 5;
 }
 
@@ -328,6 +328,6 @@ video.ethanSpriteRunningRight {
   text-align: center;
   font-size: 50px;
   border: 10px solid blue;
-  padding: 5px 5px;
+  padding: 10px 10px;
   z-index: 5;
 }

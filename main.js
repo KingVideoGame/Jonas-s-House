@@ -3,7 +3,7 @@ const element = document.getElementById("HOUSE");
 //FOCUS ON THE MAIN ELEMENT
 document.getElementById("intro").focus();
 //This is the play button. Ok bye again
-document.getElementById("play-button").addEventListener("click", function () {
+document.getElementById("play-button").addEventListener("click", function() {
   document.getElementById("main").hidden = true;
   document.getElementById("title-background").pause();
   document.getElementById("title-music").pause();
@@ -11,9 +11,13 @@ document.getElementById("play-button").addEventListener("click", function () {
   document.getElementById("entryScreen").focus();
 });
 //Intro cutscene yay
+document.getElementById("introCutscene").addEventListener("click", function() {
+  document.getElementById("introCutscene").play();
+});
+
 document.getElementById("intro").addEventListener("keydown", function (event) {
-  if (event.code === "KeyD") {
-    console.log("KeyD pressed!");
+  if (event.code === "KeyA") {
+    console.log("KeyA pressed!");
     document.getElementById("introCutscene").pause();
     document.getElementById("introCutscene").hidden = true;
     document.getElementById("introText").hidden = true;
@@ -24,7 +28,7 @@ document.getElementById("intro").addEventListener("keydown", function (event) {
   }
 });
 
-document.getElementById("introCutscene").onended = function () {
+document.getElementById("introCutscene").onended = function() {
   console.log("Cutscene ended!");
   document.getElementById("introCutscene").hidden = true;
   document.getElementById("introText").hidden = true;
@@ -182,10 +186,12 @@ document.getElementById("livingRoom").addEventListener("keydown", function (even
       document.getElementById("livingRoomCodeOne").hidden = false;
       document.getElementById("livingRoomCodeTwo").hidden = false;
       document.getElementById("livingRoomCodeThree").hidden = false;
+      document.getElementById("livingRoomCodeBackground").focus();
+    } else {
+      event.preventDefault();
+      console.log("Womp womp KeyA doesn't work here");
     }
   }
-  else event.preventDefault()
-  console.log("Womp womp KeyA doesn't work here");
   if (event.code === "KeyB") {
     console.log("KeyB pressed!");
     document.getElementById("livingRoomCodeBackground").hidden = true;
