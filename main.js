@@ -172,13 +172,15 @@ document.getElementById("livingRoom").addEventListener("keyup", function (event)
 
 //"A" Button!
 function updateAButton() {
-  const shown = spriteX >= 30 && spriteZ <= -30;
+  const shown = (spriteX >= 30 && spriteZ <= -30) || (spriteX <= -30 && spriteZ <= -30);
   document.getElementById("a-button").hidden = !shown;
 }
 
 document.getElementById("livingRoom").addEventListener("keydown", function (event) {
-  if (spriteX >= 30 && spriteZ <= -30) {
-    if (event.code === "KeyA") {
+  if (event.code === "KeyA") {
+    console.log("KeyA pressed!", spriteX, spriteZ);
+    if (spriteX >= 30 && spriteZ <= -30) {
+      event.preventDefault();
       console.log("KeyA pressed!");
       document.getElementById("livingRoomCodeBackground").hidden = false;
       document.getElementById("bButtonText").hidden = false;
@@ -187,8 +189,15 @@ document.getElementById("livingRoom").addEventListener("keydown", function (even
       document.getElementById("livingRoomCodeTwo").hidden = false;
       document.getElementById("livingRoomCodeThree").hidden = false;
       document.getElementById("livingRoomCodeBackground").focus();
-    } else {
+    } else if (spriteX <= -30 && spriteZ <= -30) {
       event.preventDefault();
+      console.log("KeyA pressed!");
+      document.getElementById("livingRoomPaper").hidden = false;
+      document.getElementById("bButtonText").hidden = false;
+      document.getElementById("a-button").hidden = true;
+      document.getElementById("j100").hidden = false;
+      document.getElementById("livingRoomPaper").focus();
+    } else {
       console.log("Womp womp KeyA doesn't work here");
     }
   }
@@ -199,5 +208,12 @@ document.getElementById("livingRoom").addEventListener("keydown", function (even
     document.getElementById("livingRoomCodeOne").hidden = true;
     document.getElementById("livingRoomCodeTwo").hidden = true;
     document.getElementById("livingRoomCodeThree").hidden = true;
+    document.getElementById("livingRoomPaper").hidden = true;
+    document.getElementById("j100").hidden = true;
+    document.getElementById("livingRoom").focus();
   }
+});
+
+document.getElementById("livingRoom").addEventListener("keydown", function (event) {
+
 });

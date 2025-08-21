@@ -263,15 +263,24 @@ video.ethanSpriteRunningRight {
   z-index: 4;
 }
 
-.livingRoomCodeBG {
+.overlayHint {
   position: absolute;
   text-align: center;
   width: 75%;
   height: 75%;
-  background-image: url('living-room-code-background.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid black;
   z-index: 4;
+}
+
+.livingRoomCodeBG {
+  background-image: url('living-room-code-background.png');
+}
+
+.livingRoomPaper {
+  background-image: url('living-room-paper.png');
 }
 
 .bButtonText {
@@ -329,5 +338,15 @@ video.ethanSpriteRunningRight {
   font-size: 50px;
   border: 10px solid blue;
   padding: 10px 10px;
+  z-index: 5;
+}
+
+.j100PuzzleText {
+  position: absolute;
+  top: 43%;
+  left: 48%;
+  color: black;
+  font: 120px Impact, monospace;
+  text-align: center;
   z-index: 5;
 }
